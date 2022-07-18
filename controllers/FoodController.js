@@ -3,13 +3,17 @@ const Order = require('../models/Order');
 
 exports.create = (req, res) => {
     const data = req.body;
-    const requiedFields = [];
+    const requiedFields = ['price', 'name', 'description', ];
 
-    const isValid = object.key
+    const missingField = requiedFields.filter(key => {
+        return !Object.key(data).includes(key)
+    })
 
 }
 
-exports.create = (req, res) => {
+exports.readAll = async(req, res) => {
+    const food = await Food.find()
+
     
 }
 exports.create = (req, res) => {

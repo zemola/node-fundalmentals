@@ -6,10 +6,16 @@ const foodSchema = mongoose.Schema({
              required: true
             }, 
     name: { type: Number,
+            required: true
+          },
+    description: {
+        type: String,
         required: true
-       },
-    description: String,
-    Image: String
+        },
+    Image: {
+        type: String,
+        required: true
+        },
 }, {
     timestamps: true
 }
